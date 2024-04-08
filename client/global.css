@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Montserrat&display=swap');
+
+:root {
+    --bg: #dddddd;
+    --fg: #1d2021;
+}
+
+:root.dark {
+    --bg: #1d2021;
+    --fg: #dddddd;
+    --bg0: #222;
+    --fg0: white;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #101010;
+        --fg: #dddddd;
+        --bg0: #191919;
+        --fg0: white;
+    }
+    :root.light {
+        --bg: #dddddd;
+        --fg: #1d2021;
+    }
+}
+
+body {
+    font-family: 'EB Garamond', serif;
+    font-size: 18px;
+    margin: 2rem;
+    background: var(--bg);
+    color: var(--fg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
