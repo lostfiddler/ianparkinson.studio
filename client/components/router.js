@@ -11,7 +11,8 @@ const routes = {
 }
 
 for (let post of await getBlogPosts()){
-    routes['/blog/' + post.title] = new PostPageTemplate();
+
+    routes['/blog/' + post.title.replace(/\s/g, '%20')] = new PostPageTemplate();
 }
 
 export default function Route() {
